@@ -1,0 +1,6 @@
+﻿/* stylesheet */
+#container #time { margin: 0 auto; width: 650px; text-align: center; font-weight: bold; font-size: 2em; } 
+#container #time ul#dates { list-style: none; text-align: left; margin-top: -20px; } 
+#container #time ul#dates li { float: left; margin: 2px; padding: 8px; }
+#container .sliders { margin-top: 70px; }
+#container table tr td { text-align: left;  }

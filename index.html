@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="ui/jquery.ui.core.js"></script>
+<script type="text/javascript" src="ui/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="ui/jquery.ui.mouse.js"></script>
+<script type="text/javascript" src="ui/jquery.ui.slider.js"></script>
+<script type="text/javascript" src="js/calculator.js"></script>
+<link rel="stylesheet" href="ui/css/jquery.ui.all.css">
+<link type="text/css" rel="stylesheet" href="css/calc.css" media="all">
+<link type="text/css" rel="stylesheet" href="css/style.css" media="all">
+<title>Calculator jQuery</title>
+</head>
+<!--[if lt IE 7]>
+<style type="text/css">
+#container
+{
+	height: 100%;
+}
+</style>
+<![endif]-->
+<body>
+
+<div id="container">
+	<div id="header"><h1 class="domen"><a href="#" >Calculator jQuery</a></h1></div>
+	<div id="body"><h1 ><a href="#" >jQuery калькулятор цены по дате и времени</a></h1>
+	<div class="content">
+		<div>		
+		
+			<h3 align="center" style="text-decoration: underline;">Текущее время и дата</h3>
+		<div id="time"><ul id="dates"><li>[ <span id="jez">en</span> ]</li><li id="wDay"> - </li><li id="cDay"> - </li><li id="cMonth"> - </li><li id="cYear"> - </li><li><span id="cHour"> - </span>:<span id="cMin"> - </span></li></ul></div>
+		<div class="sliders">
+			<label for="dWeek">День недели<div id="dWeek"></div></label>
+			
+			<label for="sDay">Число<div id="sDay"></div></label>
+			
+			<label for="sMonth">Месяц<div id="sMonth"></div></label>
+			
+			<label for="sYear">Год<div id="sYear"></div></label>
+			
+			<label for="sHour">Часы<div id="sHour"></div></label>
+			
+			<label for="sMin">Минуты<div id="sMin"></div></label>
+			
+			<blockquote style="margin: 10px auto;">
+				<label for="lang"><input type="radio" value="eng" id="eng" name="lng" checked="checked"/>&nbsp; English</label><br />
+				<label for="lang"><input type="radio" value="rus" id="rus" name="lng" />&nbsp; Russian</label>
+				
+				<div align="right">
+					Итого: <span id="total"> 0 </span> <span id="valuta">у.е.</span>
+				</div>
+				
+			</blockquote>
+			<hr>
+			<div style="margin-top: 10px">
+				
+				<table style="width: 100%">
+					
+					<caption>константы</caption>
+					<th width="170" align="left">Дата/время</th><th width="100" align="left">у.е.</th><th align="left"> руб. </th>
+					<tr><td>Пн</td><td>2</td><td>20.30</td></tr>
+					<tr><td>Вт</td><td>1.5</td><td>15.40</td></tr>
+					<tr><td>Ср</td><td>3.5</td><td>9</td></tr>
+					<tr><td>Чт</td><td>1.5</td><td>6</td></tr>
+					<tr><td>Пт</td><td>15.5</td><td>76.23</td></tr>				
+					<tr><td>Сб</td><td>1</td><td>10</td></tr>
+					<tr><td>Вс</td><td>1.5</td><td>19.10</td></tr>
+					
+					<tr><td>За каждое число</td><td>0.25</td><td>2</td></tr>
+					<tr><td>За каждый месяц</td><td>3</td><td>4.99</td></tr>
+					<tr><td>За каждый год</td><td>10</td><td>50</td></tr>
+					
+					<tr><td>За 1 час</td><td>0.1</td><td>100</td></tr>
+					<tr><td>За 1 мин.</td><td>0.25</td><td>10</td></tr>
+					
+					
+					<th align="left" style="text-align: left; padding: 20px;" colspan="3">
+					<big>Формула</big><br /> 
+					+ (день недели * константу дня недели ) <br />
+					+ ( число * константу чисел месяца ) <br />
+					+ ( месяц * месячную константу ) <br />
+					+ ( ( год / 1000 ) * годовую константу )<br />
+					+ ( часы * почасовую константу ) <br />
+					+ ( текущие минуты * поминутную константу )<br />
+					= ИТОГ (в у.е. либо же в руб.)
+					</th>
+					
+				</table>
+			</div>
+		</div>
+		
+		</div>
+	</div>
+
+</div>
+
+</body>
+</html>
